@@ -1,0 +1,120 @@
+:root {
+  --white: #f4f0eb;
+  --black: #232425;
+  --blue: #07beb8;
+  --yellow: #ffee09;
+
+  --font-primary: 'Arimo', serif;
+  --font-secondary: 'Cabin', serif;
+  --font-tertiary: 'Libre Franklin', serif;
+
+  --breakpoint-desktop: 1440px;
+  --breakpoint-tablet: 1024px;
+  --breakpoint-mobile: 768px;
+
+  --font-size-large: 2.4rem;
+  --font-size-medium: 1.6rem;
+  --font-size-small: 1.2rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: var(--font-tertiary);
+  font-size: var(--font-size-small);
+  text-decoration: none;
+}
+
+body {
+  max-width: var(--breakpoint-desktop);
+  margin: 0 auto;
+  background-color: var(--white);
+}
+
+h1 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-large);
+}
+h2 {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-medium);
+}
+
+header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-top: 1em;
+  height: 6em;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--blue);
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+header nav {
+  margin-top: 1em;
+  padding: 1em;
+  width: 100%;
+  background-color: var(--black);
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+header nav ul li a {
+  font-weight: bold;
+  color: var(--white);
+}
+header nav ul li a:hover {
+  color: var(--blue);
+  transition: ease-in-out 0.2s;
+}
+
+main {
+  padding: 1em;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+}
+
+section {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+section h2 {
+  text-align: center;
+  color: var(--white);
+}
+
+section {
+  background-color: var(--blue);
+  border-radius: 10px;
+}
+
+#courseWork div {
+  background-color: red;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#place div {
+  background-color: blue;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+#certificates div {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+}
