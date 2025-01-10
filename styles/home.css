@@ -332,14 +332,4 @@ footer {
   .button {
     padding: 0.2em 1.2em;
   }
-  /* .button {
-    font-family: var(--font-secondary);
-    font-weight: bold;
-    padding: 0.5em 3em;
-    font-size: var(--font-size-small);
-    border-radius: 10px;
-    background-color: var(--yellow);
-    cursor: pointer;
-    text-align: center;
-  } */
 }
