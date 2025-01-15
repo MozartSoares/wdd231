@@ -1,0 +1,5 @@
+{
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+  "editor.defaultFormatter": "svipas.prettier-plus",
+  "editor.smartSelect.selectLeadingAndTrailingWhitespace": false
+}
