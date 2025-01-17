@@ -33,13 +33,13 @@ a {
 }
 
 body {
-  margin: 0 auto;
   color: var(--black);
   background-color: var(--black);
 }
 
 main {
   max-width: var(--breakpoint-desktop);
+  margin: 0 auto;
 }
 
 h1 {
@@ -61,12 +61,12 @@ header {
   top: 0;
   z-index: 1000;
   background-color: var(--black);
-  margin: 0 auto;
 }
 
 header>div {
   display: flex;
   justify-content: center;
+  margin: 0 auto;
   align-items: center;
   max-width: var(--breakpoint-desktop);
 }
@@ -308,6 +308,7 @@ footer {
   color: var(--white); 
   padding: 30px;
   font-size: 0.9em;
+  margin: 0 auto;
   max-width: var(--breakpoint-desktop);
 }
 
