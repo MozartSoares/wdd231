@@ -333,7 +333,7 @@ footer p {
 }
 
 footer a {
-  color: #07beb8; 
+  color: var(--blue); 
   text-decoration: none;
 }
 
