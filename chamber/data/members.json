@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Tech Innovators Inc.",
+    "address": "1234 Innovation Drive, Itajaí, Santa Catarina, Brazil",
+    "phone": "123-456-7890",
+    "website": "https://www.techinnovators.com",
+    "image": "tech.svg",
+    "membership_level": 3,
+    "description": "Leading the way in tech innovation."
+  },
+  {
+    "name": "Green En Solutions",
+    "address": "5678 Eco Lane, Itajaí, Santa Catarina, Brazil",
+    "phone": "987-654-3210",
+    "website": "https://www.greenenergy.com",
+    "image": "green.svg",
+    "membership_level": 2,
+    "description": "Providing green energy solutions."
+  },
+  {
+    "name": "Healthy Living Co.",
+    "address": "9101 Wellness Blvd, Itajaí, Santa Catarina, Brazil",
+    "phone": "555-123-4567",
+    "website": "https://www.healthyliving.com",
+    "image": "health.svg",
+    "membership_level": 1,
+    "description": "Promoting healthy lifestyles."
+  },
+  {
+    "name": "Finance X LLC",
+    "address": "6789 Money Street, Itajaí, Santa Catarina, Brazil",
+    "phone": "333-222-1111",
+    "website": "https://www.financeexperts.com",
+    "image": "finance.svg",
+    "membership_level": 2,
+    "description": "Expert financial advice and services."
+  },
+  {
+    "name": "Creative Co.",
+    "address": "3456 Art Blvd, Itajaí, Santa Catarina, Brazil",
+    "phone": "222-333-4444",
+    "website": "https://www.creativedesigns.com",
+    "image": "creative.svg",
+    "membership_level": 1,
+    "description": "Innovative and creative design solutions."
+  },
+  {
+    "name": "Travelers Ltd.",
+    "address": "7890 Explorer Road, Itajaí, Santa Catarina, Brazil",
+    "phone": "111-222-3333",
+    "website": "https://www.traveladventures.com",
+    "image": "travel.svg",
+    "membership_level": 3,
+    "description": "Your gateway to amazing  experiences."
+  },
+  {
+    "name": "EduTech Services",
+    "address": "2345 Learning Ave, Itajaí, Santa Catarina, Brazil",
+    "phone": "444-987-6543",
+    "website": "https://www.edutech.com",
+    "image": "edu.svg",
+    "membership_level": 3,
+    "description": "Innovative tech solutions."
+  }
+]
