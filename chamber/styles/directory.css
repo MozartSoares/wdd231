@@ -8,7 +8,7 @@
   --font-secondary: 'Cabin', serif;
   --font-tertiary: 'Libre Franklin', serif;
 
-  --breakpoint-desktop: 1024px;
+  --breakpoint-desktop: 1440px;
   --breakpoint-mobile: 864px;
 
   --font-size-large: 1.8rem;
@@ -34,12 +34,14 @@ a {
 
 body {
   color: var(--black);
-  background-color: var(--black);
+  background-color: rgba(35, 36, 37, .8);
 }
 
 main {
   max-width: var(--breakpoint-desktop);
   margin: 0 auto;
+  background-color: rgba(35, 36, 37, .8);
+  border-bottom: 1px solid rgba(255, 238, 9, .5);
 }
 
 h1 {
@@ -61,20 +63,21 @@ header {
   top: 0;
   z-index: 1000;
   background-color: var(--black);
-}
+} 
 
 header>div {
   display: flex;
+  padding: .5em;
   justify-content: center;
   margin: 0 auto;
   align-items: center;
   max-width: var(--breakpoint-desktop);
+  border-bottom: 1px solid rgba(255, 238, 9, .5);
 }
 
 header .title {
   display: flex;
   flex-direction: column;
-
   font-weight: bold;
 }
 header img {
@@ -145,7 +148,7 @@ header .title p {
   display: none; 
   flex-direction: column;
   position: absolute;
-  top: 102px;
+  top: 115px;
   right: 0;
   gap: 1em;
   background-color: var(--black);
@@ -309,7 +312,6 @@ footer {
   padding: 30px;
   font-size: 0.9em;
   margin: 0 auto;
-  max-width: var(--breakpoint-desktop);
 }
 
 .footer-container {
@@ -376,7 +378,7 @@ footer i {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 1em;
+  padding-top: 1em;
   list-style: none;
 }
 #list>h2{
@@ -396,6 +398,10 @@ footer i {
     background-color: transparent;
     width: auto;
     padding: 0;
+  }
+
+  header {
+    position: relative;
   }
 
   .menu li {
