@@ -22,7 +22,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.hero h1 {
+.hero h2 {
   font-size: var(--font-size-large);
   margin-bottom: 1rem;
 }

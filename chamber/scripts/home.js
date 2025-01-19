@@ -2,6 +2,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   fetchSpotlightMembers()
   // fetchWeatherData();
 });
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+menuToggle.addEventListener('click', () => {
+  menu.classList.toggle('active');
+  menuToggle.classList.toggle('active');
+});
 
 const currentYear = new Date().getFullYear();
 document.getElementById('copyright').textContent = `© ${currentYear} 🧑🏻‍💻Mozart Soares 🧑🏻‍💻, Brazil`;
