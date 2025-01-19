@@ -108,13 +108,3 @@ function createList(businesses) {
   }
 }
 
-const body = document.body;
-const html = document.documentElement;
-
-const width = Math.max(
-  body.scrollWidth,
-  body.offsetWidth,
-  html.clientWidth,
-  html.scrollWidth,
-  html.offsetWidth
-);

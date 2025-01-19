@@ -15,11 +15,7 @@
   --font-size-medium: 1.2rem;
   --font-size-small: 1rem;
 }
-@font-face {
-  font-family: 'CustomFont';
-  src: url('custom-font.woff2') format('woff2');
-  font-display: swap;
-}
+
 * {
     margin: 0;
     padding: 0;
@@ -168,6 +164,11 @@ header .title p {
   color: var(--white);
 }
 
+.menu li a:not(.active-link):hover {
+  color: var(--yellow);
+  transition: ease-in-out .3s;
+}
+
 .active-link {
   color: var(--yellow);
 }
@@ -185,7 +186,6 @@ header .title p {
   gap: 1em;
   display: grid;
 }
-
 
 .business-card {
   margin: 0 auto;
@@ -209,6 +209,8 @@ header .title p {
   background-color: var(--blue);
   padding:1em;
   text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 
 }
 .card-header>div{
@@ -246,7 +248,7 @@ header .title p {
   align-items: center;
   justify-content: center;
 }
-.card-image img {
+.card-image img, .svg-image {
   max-width: 50%;
   max-height: 50%;
   background-color: var(--black);
@@ -278,7 +280,6 @@ header .title p {
 .businesses-list.list{
   display: flex;
   flex-direction: column;
-
 }
 
 .business-row {
@@ -349,15 +350,18 @@ footer i {
 }
 
 .Gold {
+  font-weight: bold;
   color: gold;
 }
 
 .Silver {
   color: silver;
+  font-weight: bold;
 }
 
 .Member {
   color: rgb(165, 89, 42);
+  font-weight: bold;
 }
 
 .button {
@@ -386,7 +390,35 @@ footer i {
   margin: .5em auto;
 }
 
+.events-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 15px; 
+  margin-top: 1rem; 
+}
+
+.events-actions a {
+  display: inline-block;
+  padding: 10px 1rem; 
+  color: var(--yellow); 
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid var(--yellow); 
+  border-radius: 8px; 
+  transition: all 0.3s ease; 
+}
+
+.events-actions a:hover {
+  background-color:var(--yellow); 
+  color: var(--black);
+  transform: scale(1.05); 
+}
 @media screen and (min-width:700px) {
+  .events-actions {
+    flex-direction: row;
+  }
+
   .menu-toggle {
     display: none; 
   }
