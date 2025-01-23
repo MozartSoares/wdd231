@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
   fetchSpotlightMembers()
-  // fetchWeatherData();
+  fetchWeatherData();
 });
 const menuToggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
@@ -15,50 +15,49 @@ document.getElementById('copyright').textContent = `© ${currentYear} 🧑🏻�
 const lastModified = document.lastModified;
 document.getElementById('lastModified').textContent = `Last updated: ${lastModified}`;
 
-// const apiKey = 'f012c3a9c8db66ad692a01c1ba3dfb8b'; // Replace with your OpenWeatherMap API key
-// const chamberLocation = { lat: -26.9078, lon: -48.6619 }; // Replace with the desired location's coordinates
+const apiKey = 'f012c3a9c8db66ad692a01c1ba3dfb8b';
+const chamberLocation = { lat: -26.9078, lon: -48.6619 };
 
-// async function fetchWeatherData() {
-//   try {
-//     // Fetch current weather
-//     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${chamberLocation.lat}&lon=${chamberLocation.lon}&appid=${apiKey}`;
-//     const currentWeatherResponse = await fetch(currentWeatherUrl);
-//     const currentWeather = await currentWeatherResponse.json();
+async function fetchWeatherData() {
+  try {
+    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${chamberLocation.lat}&lon=${chamberLocation.lon}&appid=${apiKey}`;
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${chamberLocation.lat}&lon=${chamberLocation.lon}&units=imperial&appid=${apiKey}`;
 
-//     // Fetch 3-day forecast
-//     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${chamberLocation.lat}&lon=${chamberLocation.lon}&units=imperial&appid=${apiKey}`;
-//     const forecastResponse = await fetch(forecastUrl);
-//     const forecastData = await forecastResponse.json();
+    const [currentWeatherResponse, forecastResponse] = await Promise.all([
+      fetch(currentWeatherUrl),
+      fetch(forecastUrl)
+    ]);
 
-//     // Update current weather
-//     const currentWeatherElement = document.getElementById('current-weather');
-//     currentWeatherElement.innerHTML = `
-//         <p><strong>${Math.round(currentWeather.main.temp)}°F</strong> - ${currentWeather.weather[0].description}</p>
-//         <p>High: ${Math.round(currentWeather.main.temp_max)}°F | Low: ${Math.round(currentWeather.main.temp_min)}°F</p>
-//         <p>Humidity: ${currentWeather.main.humidity}%</p>
-//         <p>Sunrise: ${new Date(currentWeather.sys.sunrise * 1000).toLocaleTimeString()}</p>
-//         <p>Sunset: ${new Date(currentWeather.sys.sunset * 1000).toLocaleTimeString()}</p>
-//       `;
+    const currentWeather = await currentWeatherResponse.json();
+    const forecastData = await forecastResponse.json();
 
-//     // Update forecast
-//     const forecastElement = document.getElementById('forecast');
-//     let forecastHtml = '<h3>3-Day Forecast</h3>';
-//     for (let i = 0; i < 3; i++) {
-//       const forecast = forecastData.list[i * 8]; // Fetching data for 3 days (24-hour intervals)
-//       forecastHtml += `
-//           <p>
-//             <strong>${new Date(forecast.dt * 1000).toLocaleDateString()}</strong>: 
-//             ${Math.round(forecast.main.temp)}°F - ${forecast.weather[0].description}
-//           </p>
-//         `;
-//     }
-//     forecastElement.innerHTML = forecastHtml;
+    const currentWeatherElement = document.getElementById('current-weather');
+    currentWeatherElement.innerHTML = `
+        <p><strong class="active-link">${Math.round(currentWeather.main.temp)}°F</strong> - ${currentWeather.weather[0].description}</p>
+        <p>High: ${Math.round(currentWeather.main.temp_max)}°F | Low: ${Math.round(currentWeather.main.temp_min)}°F</p>
+        <p>Humidity: ${currentWeather.main.humidity}%</p>
+        <p>Sunrise: ${new Date(currentWeather.sys.sunrise * 1000).toLocaleTimeString()}</p>
+        <p>Sunset: ${new Date(currentWeather.sys.sunset * 1000).toLocaleTimeString()}</p>
+      `;
 
-//   } catch (error) {
-//     console.error('Error fetching weather data:', error);
-//     document.getElementById('current-weather').innerHTML = `<p>Error loading weather data.</p>`;
-//   }
-// }
+    const forecastElement = document.getElementById('forecast');
+    let forecastHtml = '<h3>3-Day Forecast</h3>';
+    for (let i = 0; i < 3; i++) {
+      const forecast = forecastData.list[i * 8];
+      forecastHtml += `
+          <p>
+            <strong>${new Date(forecast.dt * 1000).toLocaleDateString()}</strong>: 
+            ${Math.round(forecast.main.temp)}°F - ${forecast.weather[0].description}
+          </p>
+        `;
+    }
+    forecastElement.innerHTML = forecastHtml;
+
+  } catch (error) {
+    console.error('Error fetching weather data:', error);
+    document.getElementById('current-weather').innerHTML = `<p>Error loading weather data.</p>`;
+  }
+}
 
 async function fetchSpotlightMembers() {
   try {
