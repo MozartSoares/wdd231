@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-.thankyou-container h1 {
+.thankyou-container h2 {
   color:var(--yellow);
   font-size: var(--font-size-large);
   margin-bottom: 1rem;
@@ -30,7 +30,7 @@
   max-width: 700px;
 }
 
-.submitted-info h2 {
+.submitted-info h3 {
   color: var(--yellow);
   margin-bottom: 1rem;
 }
@@ -54,7 +54,8 @@
 }
 
 #contact-link {
-  color: var(--yellow);
+  color: var(--blue);
+  font-weight: bold;
 }
 #contact-link:hover {
   text-decoration: underline;
