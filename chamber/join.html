@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta
+    name="description"
+    content="Welcome to the chamber of commerce join page"
+    >
+    <meta name="author" content="Mozart Soares" >
+    <meta property="og:title" content="Itajaí Chamber of Commerce | Join Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://MozartSoares.github.io/wdd231/chamber/images/logo.webp">
+    <meta property="og:url" content="https://MozartSoares.github.io/wdd231/chamber/join.html">
+    <meta property="og:description" content="Welcome to the chamber of commerce join page">
+    <meta property="og:site_name" content="Itajaí Chamber of Commerce">
+    <title>Itajaí Chamber of Commerce | Join Page</title>
+    <link rel="icon" href="images/favicon-logo.webp" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:wght@400..700&family=Cabin:ital,wght@0,400..700;1,400..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/join.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <img src="images/logo.webp" alt="Itajaí Chamber of Commerce logo" width="100" height="100">
+        <div class="title">
+          <div>
+            <h1>Itajaí</h1>
+            <p>Chamber of Commerce</p>
+          </div>
+          <div class="menu-toggle" id="menu-toggle">
+            <span class="hamburger"></span>
+          </div>
+        </div>
+        <nav>
+        <ul class="menu" id="menu">
+          <li><a  href="./index.html">Home</a></li>
+          <li><a href="./directory.html">Directory</a></li>
+          <li><a class="active-link" href="#">Join</a></li>
+          <li><a href="">Discover</a></li>
+        </ul>
+      </nav>
+      </div>
+    </header>
+    <main>
+        <div class="form-layout">
+            <form id="joinForm" method="get" action="thankyou.html">
+                <h2>Membership Application</h2>
+                
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label>First Name:
+                        <input type="text" name="firstName" required autocomplete="given-name">
+                    </label>
+                    
+                    <label>Last Name:
+                        <input type="text" name="lastName" required autocomplete="family-name">
+                    </label>
+                    
+                    <label>Title:
+                        <input type="text" name="title" autocomplete="organization-title" 
+                            pattern="[A-Za-zÀ-ÿ\- ]{7,}">
+                    </label>
+                </fieldset>
+    
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label>Email:
+                        <input type="email" name="email" required autocomplete="email"
+                            placeholder="example@domain.com">
+                    </label>
+                    
+                    <label>Mobile Phone:
+                        <input type="tel" name="phone" required autocomplete="tel">
+                    </label>
+                </fieldset>
+    
+                <fieldset>
+                    <legend>Organization Details</legend>
+                    <label>Organization Name:
+                        <input type="text" name="organization" required autocomplete="organization">
+                    </label>
+                    
+                    <label>Membership Level:
+                        <select name="membership" required>
+                            <option value="">Please Select</option>
+                            <option value="np">NP Membership (Non-profit)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+                    
+                    <label>Organization Description:
+                        <textarea name="description" rows="4"></textarea>
+                    </label>
+                </fieldset>
+    
+                <input type="hidden" id="timestamp" name="timestamp">
+                <button type="submit">Submit Application</button>
+            </form>
+    
+            <div class="membership-cards">
+                <div class="card np-card">
+                    <h3 class="blue">NP Membership</h3>
+                    <p>Non-profit Organizations</p>
+                    <p>No Fee</p>
+                    <a href="#np-modal" class="info-link">View Benefits</a>
+                </div>
+    
+                <div class="card bronze-card">
+                    <h3 class="Member">Bronze</h3>
+                    <p>Basic Membership</p>
+                    <a href="#bronze-modal" class="info-link">View Benefits</a>
+                </div>
+    
+                <div class="card silver-card">
+                    <h3 class="Silver">Silver</h3>
+                    <p>Advanced Benefits</p>
+                    <a href="#silver-modal" class="info-link">View Benefits</a>
+                </div>
+    
+                <div class="card gold-card">
+                    <h3 class="Gold">Gold</h3>
+                    <p>Premium Package</p>
+                    <a href="#gold-modal" class="info-link">View Benefits</a>
+                </div>
+            </div>
+        </div>
+    
+        <div id="np-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 class="blue">NP Membership Benefits</h3>
+                <ul>
+                    <li>Free listing in directory</li>
+                    <li>Access to networking events</li>
+                    <li>Non-profit resources</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div id="bronze-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 class="Member">Bronze Membership Benefits</h3>
+                <ul>
+                    <li>All NP benefits plus:</li>
+                    <li>Basic training sessions (2/year)</li>
+                    <li>5% event discounts</li>
+                    <li>Business listing in newsletter</li>
+                    <li>Member-only networking groups</li>
+                </ul>
+                <p class="price">Annual Fee: $200</p>
+            </div>
+        </div>
+
+        <div id="silver-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 class="Silver">Silver Membership Benefits</h3>
+                <ul>
+                    <li>All Bronze benefits plus:</li>
+                    <li>Premium training sessions (4/year)</li>
+                    <li>10% event discounts</li>
+                    <li>Home page advertising (rotating)</li>
+                    <li>Social media shoutouts</li>
+                    <li>Priority event registration</li>
+                </ul>
+                <p class="price">Annual Fee: $400</p>
+            </div>
+        </div>
+
+        <div id="gold-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 class="Gold">Gold Membership Benefits</h3>
+                <ul>
+                    <li>All Silver benefits plus:</li>
+                    <li>VIP event access</li>
+                    <li>25% event discounts</li>
+                    <li>Home page featured spot</li>
+                    <li>Dedicated account manager</li>
+                    <li>Business mentoring sessions</li>
+                    <li>Premium member badge</li>
+                    <li>Annual leadership conference pass</li>
+                </ul>
+                <p class="price">Annual Fee: $600</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="contact-info">
+          <h4>Contact Us</h4>
+          <p><a href="mailto:contact@business.com">contact@business.com</a></p>
+          <p>(123) 456-7890</p>
+          <p>123 Chamber Street, Itajaí | Brazil</p>
+        </div>
+        <div class="developer-info">
+          <h4>Developer Info</h4>
+          <p id="copyright"></p>
+          <p>WDD 231</p>
+          <p id="lastModified"></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

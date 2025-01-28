@@ -3,6 +3,8 @@
   --black: #232425;
   --blue: #07beb8;
   --yellow: #ffee09;
+  --bronze: rgb(165, 89, 42);
+  --green:#27ae60;
 
   --font-primary: 'Arimo', serif;
   --font-secondary: 'Cabin', serif;
@@ -349,6 +351,11 @@ footer i {
   color:var(--blue); 
 }
 
+.blue {
+  color: var(--blue);
+  font-weight: bold;
+}
+
 .Gold {
   font-weight: bold;
   color: gold;
@@ -360,7 +367,7 @@ footer i {
 }
 
 .Member {
-  color: rgb(165, 89, 42);
+  color: var(--bronze);
   font-weight: bold;
 }
 
