@@ -164,4 +164,7 @@ button[type="submit"] {
         align-content: start;
     }
 
+    .modal-content {
+        margin: 15% auto;
+    }
 }
