@@ -20,7 +20,7 @@ const chamberLocation = { lat: -26.9078, lon: -48.6619 };
 
 async function fetchWeatherData() {
   try {
-    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${chamberLocation.lat}&lon=${chamberLocation.lon}&appid=${apiKey}`;
+    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${chamberLocation.lat}&lon=${chamberLocation.lon}&units=imperial&appid=${apiKey}`;
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${chamberLocation.lat}&lon=${chamberLocation.lon}&units=imperial&appid=${apiKey}`;
 
     const [currentWeatherResponse, forecastResponse] = await Promise.all([
@@ -32,11 +32,11 @@ async function fetchWeatherData() {
     const forecastData = await forecastResponse.json();
 
     const currentWeatherElement = document.getElementById('current-weather');
-    const kelvinToFahrenheit = (kelvin) => Math.round((kelvin - 273.15) * 9 / 5 + 32);
+
 
     currentWeatherElement.innerHTML = `
-      <p><strong class="active-link">${kelvinToFahrenheit(currentWeather.main.temp)}°F</strong> - ${currentWeather.weather[0].description}</p>
-      <p>High: ${kelvinToFahrenheit(currentWeather.main.temp_max)}°F | Low: ${kelvinToFahrenheit(currentWeather.main.temp_min)}°F</p>
+      <p><strong class="active-link">${currentWeather.main.temp}°F</strong> - ${currentWeather.weather[0].description}</p>
+      <p>High: ${currentWeather.main.temp_max}°F | Low: ${kelvinToFahrenheit(currentWeather.main.temp_min)}°F</p>
       <p>Humidity: ${currentWeather.main.humidity}%</p>
       <p>Sunrise: ${new Date(currentWeather.sys.sunrise * 1000).toLocaleTimeString()}</p>
       <p>Sunset: ${new Date(currentWeather.sys.sunset * 1000).toLocaleTimeString()}</p>
