@@ -32,12 +32,14 @@ async function fetchWeatherData() {
     const forecastData = await forecastResponse.json();
 
     const currentWeatherElement = document.getElementById('current-weather');
+    const kelvinToFahrenheit = (kelvin) => Math.round((kelvin - 273.15) * 9 / 5 + 32);
+
     currentWeatherElement.innerHTML = `
-        <p><strong class="active-link">${Math.round(currentWeather.main.temp)}°F</strong> - ${currentWeather.weather[0].description}</p>
-        <p>High: ${Math.round(currentWeather.main.temp_max)}°F | Low: ${Math.round(currentWeather.main.temp_min)}°F</p>
-        <p>Humidity: ${currentWeather.main.humidity}%</p>
-        <p>Sunrise: ${new Date(currentWeather.sys.sunrise * 1000).toLocaleTimeString()}</p>
-        <p>Sunset: ${new Date(currentWeather.sys.sunset * 1000).toLocaleTimeString()}</p>
+      <p><strong class="active-link">${kelvinToFahrenheit(currentWeather.main.temp)}°F</strong> - ${currentWeather.weather[0].description}</p>
+      <p>High: ${kelvinToFahrenheit(currentWeather.main.temp_max)}°F | Low: ${kelvinToFahrenheit(currentWeather.main.temp_min)}°F</p>
+      <p>Humidity: ${currentWeather.main.humidity}%</p>
+      <p>Sunrise: ${new Date(currentWeather.sys.sunrise * 1000).toLocaleTimeString()}</p>
+      <p>Sunset: ${new Date(currentWeather.sys.sunset * 1000).toLocaleTimeString()}</p>
       `;
 
     const forecastElement = document.getElementById('forecast');
