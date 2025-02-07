@@ -26,6 +26,9 @@ fieldset {
     padding: 1rem;
 }
 
+main h1 {
+    display: none;
+}
 legend {
     color: var(--yellow);
     padding: 0 0.5rem;
