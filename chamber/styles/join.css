@@ -8,9 +8,9 @@
     padding: 1rem;
 }
 
-header h1 {
-    display: flex;
-    flex-direction:  column;
+#h1 {
+    font-size: var(--font-size-large);
+    font-family: var(--font-primary);
 }
 
 form {
