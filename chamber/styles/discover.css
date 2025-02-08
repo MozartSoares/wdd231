@@ -8,6 +8,13 @@
 main {
     padding-top: 1em;
 }
+#h1 {
+    font-size: var(--font-size-large);
+    font-family: var(--font-primary);
+}
+main h1 {
+    display: none;
+}
 
 .cards-container {
     grid-template-areas:
