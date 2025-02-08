@@ -1,0 +1,98 @@
+
+.cards-container {
+    display: grid;
+    gap: 2rem;
+    margin: 1em auto;
+    padding: 1rem;
+}
+main {
+    padding-top: 1em;
+}
+
+.cards-container {
+    grid-template-areas:
+        "mercado-municipal"
+        "praia-brava"
+        "teatro-municipal"
+        "museu-oceanografico"
+        "parque-natural-municipal"
+        "porto-de-itajai"
+        "catedral-sao-joao-batista"
+        "feira-de-arte-e-artesanato";
+}
+
+
+@media (min-width: 641px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "mercado-municipal praia-brava"
+            "teatro-municipal museu-oceanografico"
+            "parque-natural-municipal porto-de-itajai"
+            "catedral-sao-joao-batista feira-de-arte-e-artesanato";
+    }
+}
+
+@media (min-width: 1025px) {
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "mercado-municipal praia-brava teatro-municipal"
+            "museu-oceanografico parque-natural-municipal porto-de-itajai"
+            "catedral-sao-joao-batista feira-de-arte-e-artesanato .";
+    }
+}
+
+.card {
+    background: var(--black);
+    color: var(--white);
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    color: var(--yellow);
+    padding-bottom: .5em;
+}
+
+.card address {
+    color: var(--yellow);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.card p {
+    margin: .5em 0;;
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--blue);
+}
+.card a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--blue);
+}
+
+@media (min-width: 641px) {
+    .card img:hover {
+        transform: scale(1.03);
+    }
+}
+
+#visit-message {
+    font-weight: bold;
+    background: var(--black);
+    color: var(--yellow);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}

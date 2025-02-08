@@ -1,0 +1,68 @@
+{
+  "cards": [
+    {
+      "title": "Mercado Municipal",
+      "imageSrc": "images/mercado.webp",
+      "imageAlt": "Municipal Market",
+      "address": "R. José Medeiros Vieira, 139 - Centro",
+      "description": "Historic market offering fresh produce, local crafts, and traditional Brazilian food stalls.",
+      "link": "#"
+    },
+    {
+      "title": "Praia Brava",
+      "imageSrc": "images/praia-brava.webp",
+      "imageAlt": "Brava Beach",
+      "address": "Av. Gov. Adolfo Konder - Praia Brava",
+      "description": "Popular beach known for its strong waves, ideal for surfing and sunset watching.",
+      "link": "#"
+    },
+    {
+      "title": "Teatro Municipal",
+      "imageSrc": "images/teatro.webp",
+      "imageAlt": "Municipal Theater",
+      "address": "R. Lauro Müller, 58 - Centro",
+      "description": "Historic theater hosting cultural events, plays, and musical performances.",
+      "link": "#"
+    },
+    {
+      "title": "Museu Oceanográfico",
+      "imageSrc": "images/museu.webp",
+      "imageAlt": "Oceanographic Museum",
+      "address": "R. República Argentina, 305 - Centro",
+      "description": "One of South America's largest marine museums featuring aquatic ecosystems.",
+      "link": "#"
+    },
+    {
+      "title": "Parque Natural Municipal",
+      "imageSrc": "images/parque.webp",
+      "imageAlt": "Natural Park",
+      "address": "R. Paulo Zimmermann - São Vicente",
+      "description": "Nature reserve with hiking trails, waterfalls, and diverse Atlantic Forest wildlife.",
+      "link": "#"
+    },
+    {
+      "title": "Porto de Itajaí",
+      "imageSrc": "images/porto.webp",
+      "imageAlt": "Itajaí Port",
+      "address": "Av. Contorno, 77 - Fazenda",
+      "description": "Brazil's second largest port with impressive ship traffic and waterfront views.",
+      "link": "#"
+    },
+    {
+      "title": "Catedral São João Batista",
+      "imageSrc": "images/catedral.webp",
+      "imageAlt": "St. John the Baptist Cathedral",
+      "address": "Praça Mons. Guilherme J. Lange - Centro",
+      "description": "Neo-Gothic cathedral featuring stunning stained glass windows and religious art.",
+      "link": "#"
+    },
+    {
+      "title": "Feira de Arte e Artesanato",
+      "imageSrc": "images/feira.webp",
+      "imageAlt": "Art and Craft Fair",
+      "address": "Av. Sete de Setembro - Centro",
+      "description": "Weekly open-air market showcasing local artists and traditional crafts.",
+      "link": "#"
+    }
+  ]
+}
