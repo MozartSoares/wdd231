@@ -1,3 +1,5 @@
+import renderBase from "./base";
+renderBase();
 const exploreCards = [
   {
     image: "./images/serra.webp",

@@ -1,3 +1,5 @@
+import renderBase from "./base";
+renderBase();
 let map;
 let currentLocation = null;
 const modal = document.getElementById('locationModal');

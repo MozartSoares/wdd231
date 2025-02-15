@@ -1,3 +1,5 @@
+import renderBase from "./base";
+renderBase();
 const form = document.getElementById('form');
 const formStatus = document.getElementById('form-status');
 const storedData = JSON.parse(localStorage.getItem('formSubmissions')) || [];
