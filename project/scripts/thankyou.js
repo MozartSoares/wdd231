@@ -1,4 +1,4 @@
-import renderBase from "./base";
+import renderBase from "./base.js";
 renderBase();
 document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);

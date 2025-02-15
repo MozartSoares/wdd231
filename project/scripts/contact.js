@@ -1,4 +1,4 @@
-import renderBase from "./base";
+import renderBase from "./base.js";
 renderBase();
 const form = document.getElementById('form');
 const formStatus = document.getElementById('form-status');
