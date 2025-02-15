@@ -1,0 +1,121 @@
+#contact-form {
+  max-width: 1300px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 90%;
+  background-color: var(--primary-dark);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: 1px solid var(--secondary-yellow);
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+h2 {
+  font-size: var(--font-size-large);
+  text-align: center;
+  color: var(--secondary-yellow);
+}
+.subtitle {
+  text-align: center;
+  font-size: var(--font-size-small);
+  max-width: 700px;
+  margin: 0.5em auto;
+  font-weight: bold;
+  color: var(--secondary-yellow);
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-weight: bold;
+  color: var(--secondary-yellow);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: bold;
+  color: var(--secondary-yellow);
+}
+
+input,
+select,
+textarea {
+  padding: 0.75rem;
+  border: 1px solid var(--secondary-yellow);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 153, 255, 0.25);
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  font-size: var(--font-size-extra-small);
+  min-height: 1.25rem;
+}
+
+@media screen and (min-width: 870px) {
+  .form-group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  label {
+    flex: 0 0 120px;
+  }
+
+  input,
+  select,
+  textarea {
+    flex: 1;
+  }
+}
+
+select,
+label,
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  gap: 0.75rem;
+  max-width: 50px;
+}
+
+button.btn {
+  margin: 0 auto;
+  background-color: var(--primary-dark);
+  border: 2px solid var(--secondary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: var(--secondary);
+  color: var(--secondary-yellow);
+  border: 1px solid transparent;
+}

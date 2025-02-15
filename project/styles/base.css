@@ -1,0 +1,236 @@
+:root {
+  --primary: #00782e;
+  --primary-dark: #006627;
+  --primary-light: #94d2bd;
+  --secondary: #002776;;
+  --secondary-light: #0043c9;;
+  --secondary-yellow: #ffcc29;
+  --white: #f7f7f7;
+  --black: #333333;
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+
+  --breakpoint-desktop: 1440px;
+
+  --font-size-large: 2rem;
+  --font-size-medium: 1.4rem;
+  --font-size-small: 1.2rem;
+  --font-size-extra-small: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+  font-size: var(--font-size-small);
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+body {
+  margin: 0 auto;
+  background-color: var(--white);
+}
+main {
+    max-width: var(--breakpoint-desktop);
+    margin: 0 auto;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-large);
+}
+h2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-medium);
+}
+
+header {
+  width: 100%;
+  padding: 0.5em;
+  background-color: var(--primary-dark);
+  color: var(--white);
+}
+.content {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--breakpoint-desktop);
+}
+
+header span {
+  font-size: var(--font-size-large);
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  max-width: var(--breakpoint-desktop);
+  gap: 1.4em;
+  padding: 1em;
+}
+
+header nav {
+  margin-top: 1em;
+  padding: 1em;
+  letter-spacing: 1px;
+  width: 100%;
+  max-width: 700px;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+header nav ul li a {
+  font-weight: bold;
+  color: var(--white);
+}
+header nav ul li a:hover {
+  color: var(--secondary-yellow);
+  border-bottom: 1px solid var(--secondary-yellow);
+  transition: ease-in-out 0.2s;
+}
+
+footer {
+  margin-top: 1em;
+  padding: 1.3em;
+  text-align: center;
+  background-color: var(--primary-dark);
+}
+
+.footer-container {
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  font-size: var(--font-size-small);
+}
+.footer-container a {
+  color: var(--secondary-yellow);
+  text-decoration: none;
+}
+.footer-container a:hover {
+  text-decoration: underline;
+}
+.footer-container p,
+.footer-container span {
+  margin: 0.5rem 0;
+}
+
+.menu-toggle {
+  display: none;
+  padding: 0 1em;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.active-tab {
+  color: var(--secondary-yellow);
+  border-bottom: 1px solid var(--secondary-yellow);
+}
+
+.menu-toggle .hamburger {
+  width: 30px;
+  height: 3px;
+  background-color: var(--white);
+  border-radius: 5px;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: var(--white);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  bottom: -8px;
+}
+
+.menu-toggle.active .hamburger {
+  background-color: transparent;
+}
+
+.menu-toggle.active .hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menu-toggle.active .hamburger::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+@media screen and (max-width: 870px) {
+  :root {
+    --font-size-large: 1.4rem;
+    --font-size-medium: 1.2rem;
+    --font-size-small: 1rem;
+    --font-size-extra-small: 0.8rem;
+  }
+
+  header {
+    position: sticky;
+    z-index: 5;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+  }
+
+  header h1 {
+    max-width: 100px;
+  }
+
+  header div {
+    padding: 0;
+  }
+
+  header img {
+    width: 50px;
+    height: 37.5px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 95%;
+    right: 0;
+    background-color: var(--primary-dark);
+    width: 100%;
+    padding: 1rem;
+  }
+
+  header nav {
+    max-width: 50px;
+  }
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .menu-toggle {
+    display: flex;
+    padding: 1em;
+  }
+}

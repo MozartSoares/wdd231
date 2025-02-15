@@ -1,0 +1,45 @@
+#thankyou {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+h2 {
+  background-color: var(--primary);
+  color: var(--secondary-yellow);
+  padding: 1em;
+  border-radius: 8px;
+  border: 1px solid var(--secondary);
+}
+
+.submitted-data {
+  background: var(--primary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  text-align: left;
+      border: 1px solid var(--secondary);
+}
+
+.submitted-data p {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  color: var(--white);
+  border-bottom: 1px solid var(--secondary-yellow);
+}
+strong {
+  color: var(--secondary-yellow);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-dark);
+  color: var(--secondary-yellow);
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--secondary);
+}

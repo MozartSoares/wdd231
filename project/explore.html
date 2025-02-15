@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <title>Brazil Exploration | Exploration Page</title>
+    <meta
+      name="description"
+      content="Brazil Exploration. This is the contact page for the Brazil Exploration, here you can contact us to suggest places."
+    >
+    <meta name="author" content="Mozart Soares" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css" >
+    <link rel="stylesheet" href="styles/explore.css" >
+    <script src="scripts/explore.js" defer></script>
+    <script src="scripts/base.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="content">
+
+        <div>
+          <img
+          src="./images/favicon.svg"
+          alt="Brazil Flag"
+          width="100"
+          height="75"
+          loading="lazy"
+          >
+          <h1>Brazil Exploration</h1>
+        </div>
+        <nav>
+          <div class="menu-toggle" id="menu-toggle">
+            <span class="hamburger"></span>
+          </div>
+          <ul class="menu" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="#" class="active-tab">Explore</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="explore"> 
+        <h2>
+        Explore All Regions
+        </h2>
+        <div id="region-nav">
+          <button type="button" class="region-btn active" data-region="north">North</button>
+          <button type="button" class="region-btn" data-region="northeast">Northeast</button>
+          <button type="button" class="region-btn" data-region="central-west">Central-West</button>
+          <button type="button" class="region-btn" data-region="southeast">Southeast</button>
+          <button type="button" class="region-btn" data-region="south">South</button>
+        </div>
+
+        <div id="region-content">
+        </div>
+
+        <div id="map-container">
+          <div id="map"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <p>
+          <span id="currentYear"></span><br >
+          Brazil Exploration. All rights reserved.
+        </p>
+        <p>
+          Developed by
+          <a
+            href="https://github.com/mozartsoares"
+            target="_blank"
+            rel="noopener"
+            >Mozart Soares</a
+          >
+        </p>
+      </div>
+    </footer>
+  <div id="locationModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <img class="modal-image" src="https://via.placeholder.com/100x100" alt="placeholder alt">
+      <div class="modal-body">
+        <h2 class="modal-title">Title</h2>
+        <div class="modal-stats">
+          <div class="stat-item">
+            <span>🌡️ Avg Temp</span>
+            <strong class="modal-temp"></strong>
+          </div>
+          <div class="stat-item">
+            <span>💧 Humidity</span>
+            <strong class="modal-humidity"></strong>
+          </div>
+          <div class="stat-item">
+            <span>📌 Elevation</span>
+            <strong class="modal-elevation"></strong>
+          </div>
+        </div>
+        <p class="modal-description"></p>
+        <div class="modal-cultural">
+          <strong>Local Tip:</strong>
+          <span class="modal-tip"></span>
+        </div>
+        <a href="#" class="modal-details-link btn-learn-more">Learn More →</a>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
