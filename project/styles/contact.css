@@ -1,3 +1,6 @@
+@import url("base.css");
+
+
 #contact-form {
   max-width: 1300px;
   margin: 2rem auto;
@@ -22,7 +25,7 @@ fieldset {
 h2 {
   font-size: var(--font-size-large);
   text-align: center;
-  color: var(--secondary-light);
+  color: var(--secondary-yellow);
   
 }
 .subtitle {
